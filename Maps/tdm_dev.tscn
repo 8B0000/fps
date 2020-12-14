@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+params_cull_mode = 2
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Mesh" type="CSGCombiner" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="Mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.6, 0 )
+width = 100.0
+height = 25.0
+depth = 100.0
+
+[node name="CSGBox2" type="CSGBox" parent="Mesh"]
+operation = 2
+width = 99.5
+height = 51.0
+depth = 99.5
+material = SubResource( 1 )
+
+[node name="CSGBox3" type="CSGBox" parent="Mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.001, 0 )
+width = 100.0
+height = 0.001
+depth = 100.0
